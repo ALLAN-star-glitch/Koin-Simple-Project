@@ -17,6 +17,7 @@ import org.koin.android.scope.AndroidScopeComponent
 import org.koin.androidx.scope.activityScope
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.qualifier.named
 import org.koin.core.scope.Scope
 
 class MainActivity : ComponentActivity(), AndroidScopeComponent{
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity(), AndroidScopeComponent{
 
     override val scope: Scope by activityScope()
 
-    private val hello by inject<String>()
+    private val hello by inject<String>(named("hello"))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

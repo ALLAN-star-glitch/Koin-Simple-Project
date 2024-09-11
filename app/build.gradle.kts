@@ -97,7 +97,6 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
     implementation ("com.squareup.retrofit2:converter-moshi:$retrofit_version")
 
-    //okhttp library
-    implementation("com.squareup.okhttp3:okhttps:3.4.1")
+
 
 }
